@@ -18,6 +18,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     setError(null);
+
     try {
       const response = await fetch(
         "http://localhost:8087/api/v1/auth/register",
@@ -28,14 +29,13 @@ const Register = () => {
         }
       );
 
-      const text = await response.text(); // Read response as text
-      const result = text ? JSON.parse(text) : {}; // Parse JSON only if not empty
+      const result = await response.json().catch(() => ({})); // Safe JSON parsing
 
       if (!response.ok)
         throw new Error(result.message || "Registration failed");
 
-      alert("Registration successful!"); // Optional success message
-      router.push("/login");
+      alert(result.message); // ✅ Display the appropriate message
+      // router.push("/login");
     } catch (err) {
       setError(err.message);
     } finally {
