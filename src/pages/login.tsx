@@ -127,7 +127,7 @@ const Login = () => {
 
       if (response.ok) {
         localStorage.setItem("auth_token", data.token); // ✅ Store token in localStorage
-        router.push("/dashboard"); // ✅ Redirect to dashboard
+        router.push("/home"); // ✅ Redirect to dashboard
       } else {
         setError(data.message || "Authentication failed");
       }
