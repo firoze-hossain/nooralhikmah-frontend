@@ -12,6 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .login-container {
@@ -100,4 +101,16 @@ h2 {
   .btn {
     font-size: 14px;
   }
+}
+.register-text {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.register-text:hover {
+  color: #0056b3;
 }

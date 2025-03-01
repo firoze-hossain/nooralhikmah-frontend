@@ -65,3 +65,15 @@
   color: red;
   font-size: 14px;
 }
+.login-text {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer !important; /* Ensures cursor change */
+  text-decoration: underline;
+  display: inline-block; /* Ensures it behaves like a clickable element */
+  transition: color 0.3s;
+}
+
+.login-text:hover {
+  color: #0056b3;
+}

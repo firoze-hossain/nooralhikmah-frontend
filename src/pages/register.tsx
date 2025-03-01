@@ -100,7 +100,12 @@ const Register = () => {
             {loading ? "Registering..." : "Register"}
           </button>
         </form>
-
+        <p className="login-link">
+          Already have an account?{" "}
+          <span onClick={() => router.push("/login")} className="login-text">
+            Log in here.
+          </span>
+        </p>
         {showLogin && (
           <div className="login-prompt">
             <p>Already registered? Log in with your email:</p>

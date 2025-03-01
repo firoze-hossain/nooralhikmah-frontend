@@ -83,9 +83,11 @@
 // };
 
 // export default Login;
+"use client";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import "@/src/styles/login.css";
+import Link from "next/link";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -168,6 +170,15 @@ const Login = () => {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+        <p className="register-link">
+          Don't have an account?{" "}
+          <span
+            onClick={() => router.push("/register")}
+            className="register-text"
+          >
+            Register here.
+          </span>
+        </p>
       </div>
     </div>
   );
