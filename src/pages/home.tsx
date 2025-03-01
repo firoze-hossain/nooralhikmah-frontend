@@ -16,6 +16,10 @@ const Home = () => {
             <Link href="/hadith">📜 Hadith</Link>
           </li>
           <li>
+            <Link href="/admin/hadith">🖊️ Create Hadith</Link>
+          </li>
+
+          <li>
             <Link href="/fiqh">⚖️ Fiqh</Link>
           </li>
           <li>
